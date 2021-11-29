@@ -8,7 +8,7 @@ int main()
 	Graph G;
 	initGraph(&G, V, vertices);
 
-/* BUILDING GRAPH V ACCORDING TO GRAPH.BMP */
+/* BUILDING GRAPH G ACCORDING TO GRAPH.BMP */
 
 	/* A ∈ V */
 	addEdge(&G.vertices[0], &V[0]); /* (A,A) ∈ E */
