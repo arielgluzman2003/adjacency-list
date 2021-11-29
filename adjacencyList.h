@@ -5,7 +5,7 @@
 	-----------------------------
 
 	Programmer: Ariel Gluzman
-	Date:  29.11.2021
+	Date:		29.11.2021
 	Language: C
 
 	General: 
