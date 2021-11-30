@@ -151,3 +151,32 @@ void printGraph(PGraph G, int VSize)
 		printf("NULL\n");
 	}
 }
+
+
+/*  OutDegree
+	--------
+	General: Finds amount of Edges coming OUT OF vertex V i.e. V's Out-Degree.
+
+	input: Graph 'G', Length of G, and Vertex to find it's Out-Degree.
+
+	output: returns amount of edges coming OUT OF vertex V, if V is not member of G, returns -1.
+*/
+int outDegree(PGraph G, int VSize, PVertex V)
+{
+	int i, counter=0;
+	PAdjNode n;
+	for (i = 0; i < VSize; i++)
+	{
+		if (G->vertices[i].v.value == V->value)
+		{
+			n = G->vertices[i].adjv;
+			while (n != NULL)
+			{
+				counter++;
+				n = n->adjv;
+			}
+			return counter;
+		}
+	}
+	return -1;
+}
