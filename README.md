@@ -2,7 +2,7 @@
 |V|  - Length of set V; Amount of _Vertices_ in a given Graph (Integer value).<br />
 |E|  - Length of set E; Amount of _Edges_ in a given Graph (Integer value).<br />
 Θ(n) - Fixed running-time complexity of given algorithm/function; n representing complexity class, n<sup>2</sup>.<br />
-O(n) - Worst-Case running-time complexity of given algorithm/function;
+O(n) - Worst-Case running-time complexity of given algorithm/function. <br />
  E'  - A part/subset of E (Edges of Graph G), fully included in E i.e. E' ⊆ E
 
 # Adjacency List
