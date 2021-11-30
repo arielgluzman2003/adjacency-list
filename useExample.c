@@ -33,6 +33,7 @@ int main()
 	printf("\n%s", isEdge(&G, vertices, &V[0], &V[1]) == 1 ? "Edge (A,B) is in E" : "Edge (A,B) is NOT in E");
 	printf("\n%s", isEdge(&G, vertices, &V[0], &V[3]) == 1 ? "Edge (A,D) is in E" : "Edge (A,D) is NOT in E");
 
+	/* remove edge from A to B (A, B) */
 	deleteEdge(&G, vertices, &V[0], &V[1]);
 
 	/* Show Difference after deleting edge (A,B) */
@@ -43,4 +44,10 @@ int main()
 
 	/* Print out-degree of Vertex V[0] ('A') */
 	printf("\nOut-Degree of vertex '%c': %d\n", V[0].value, outDegree(&G, vertices, &V[0]));
+
+	/* Print out-degree of Vertex V2 ('E') which is not in Graph G*/
+	printf("\nOut-Degree of vertex '%c': %d\n", V2.value, outDegree(&G, vertices, &V2));
+
+	/* Print in-degree of Vertex V[2] ('C') */
+	printf("\nIn-Degree of vertex '%c': %d\n", V[2].value, inDegree(&G, vertices, &V[2]));
 }
