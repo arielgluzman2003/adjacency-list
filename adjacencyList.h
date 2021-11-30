@@ -86,5 +86,6 @@ int isEdge(PGraph, int VSize, PVertex out, PVertex in);
 void deleteEdge(PGraph G, int VSize, PVertex in, PVertex out);
 PAdjNode _findEdge(PGraph G, int VSize, PVertex out, PVertex in);
 PAdjNode _findPreviousEdge(PGraph G, int VSize, PVertex out, PVertex in);
+int outDegree(PGraph G, int VSize, PVertex V);
 
 #endif
