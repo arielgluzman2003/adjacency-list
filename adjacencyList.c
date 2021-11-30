@@ -154,29 +154,77 @@ void printGraph(PGraph G, int VSize)
 
 
 /*  OutDegree
-	--------
+	---------
 	General: Finds amount of Edges coming OUT OF vertex V i.e. V's Out-Degree.
 
 	input: Graph 'G', Length of G, and Vertex to find it's Out-Degree.
 
 	output: returns amount of edges coming OUT OF vertex V, if V is not member of G, returns -1.
 */
-int outDegree(PGraph G, int VSize, PVertex V)
+int outDegree(PGraph G, int VSize, PVertex v)
+{
+	int counter=0;
+	PAdjNode n;
+	n = _isVertexOf(G, VSize, v);
+	if (n == NULL)
+		return -1;
+	n = n->adjv;
+	while (n != NULL)
+	{
+		counter++;
+		n = n->adjv;
+	}
+	return counter;
+}
+
+/*  InDegree
+	--------
+	General: Finds amount of Edges coming INTO vertex v i.e. v's In-Degree.
+
+	input: Graph 'G', Length of G, and Vertex v to find it's Out-Degree.
+
+	output: returns amount of edges coming INTO vertex v, if v is not member of G, returns -1.
+*/
+int inDegree(PGraph G, int VSize, PVertex v)
 {
 	int i, counter=0;
 	PAdjNode n;
+	if (_isVertexOf(G, VSize, v) == NULL)
+		return -1;
+	
 	for (i = 0; i < VSize; i++)
 	{
-		if (G->vertices[i].v.value == V->value)
+		n = G->vertices[i].adjv;
+		while (n != NULL)
 		{
-			n = G->vertices[i].adjv;
-			while (n != NULL)
-			{
+			if (n->v.value == v->value)
 				counter++;
-				n = n->adjv;
-			}
-			return counter;
+			n = n->adjv;
 		}
 	}
-	return -1;
+
+	return counter;
+}
+
+
+/*  isVertexOf (PRIVATE FUNCTION)
+	--------
+	General: Finds if Vertex v is in Graph G, and retrieves it's address.
+
+	input: Graph 'G', Length of G, and Vertex to fi
+
+	output: returns address of Vertex v in Graph G is such exists, returns NULL if not.
+*/
+PAdjNode _isVertexOf(PGraph G, int VSize, PVertex v)
+{
+	int i, counter = 0;
+	PAdjNode n;
+	for (i = 0; i < VSize; i++)
+	{
+		if (G->vertices[i].v.value == v->value)
+		{
+			return &G->vertices[i];
+		}
+	}
+	return NULL;
 }
