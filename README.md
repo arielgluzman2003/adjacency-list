@@ -12,7 +12,7 @@ an adjacency list is a collection of unordered lists used to represent a finite 
 
 use _adjacencyList.h_ to create and manipulate **adjacency list represented graphs** in your C algorithms:
  
- 6 'public' functions include:
+ 7 'public' functions include:
  
  * _void initGraph(PGraph G, Vertex V[], int VSize)_ - <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  ***runtime: _Θ(|V|)_**,   **space: _Θ(|V|)_** <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
