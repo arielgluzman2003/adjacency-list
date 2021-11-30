@@ -3,7 +3,7 @@
 |E|  - Length of set E; Amount of _Edges_ in a given Graph (Integer value).<br />
 Θ(n) - Fixed running-time complexity of given algorithm/function; n representing complexity class, n<sup>2</sup>.<br />
 O(n) - Worst-Case running-time complexity of given algorithm/function;
-# Adjacency-List-in-C
+# Adjacency List
 an adjacency list is a collection of unordered lists used to represent a finite graph.
 
   ![GraphAdjList c Visual explanation](https://user-images.githubusercontent.com/52013867/144012786-75071b5a-21ad-47b3-b4bf-6f35fd9e9398.png)
