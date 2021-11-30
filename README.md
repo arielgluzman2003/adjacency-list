@@ -42,3 +42,8 @@ creates a graph and links it to pointer '**_G_**', allocates needed memory for<b
  **_runtime: Θ(|V|+|E'|)_**<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   finds if **Vertex v ∈ _V_** i.e. whether Vertex _V_ is in **_G_** or not.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   and returns _amount of edges_ coming _**out of**_ Vertex _**V**_, returns _-1_ if **_V_** is not found.
+  
+ * _int inDegree(PGraph G, int VSize, PVertex V)_ - <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ **_runtime: Θ(|V|+|E|)_**<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  finds if **Vertex v ∈ _V_** i.e. whether Vertex _V_ is in **_G_** or not.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  and returns _amount of edges_ coming _**into**_ Vertex _**V**_, returns _-1_ if **_V_** is not found.
