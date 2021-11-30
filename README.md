@@ -3,6 +3,8 @@
 |E|  - Length of set E; Amount of _Edges_ in a given Graph (Integer value).<br />
 Θ(n) - Fixed running-time complexity of given algorithm/function; n representing complexity class, n<sup>2</sup>.<br />
 O(n) - Worst-Case running-time complexity of given algorithm/function;
+ E'  - A part/subset of E (Edges of Graph G), fully included in E i.e. E' ⊆ E
+
 # Adjacency List
 an adjacency list is a collection of unordered lists used to represent a finite graph.
 
@@ -35,3 +37,8 @@ creates a graph and links it to pointer '**_G_**', allocates needed memory for<b
  **_runtime: Θ(|V|+|E|)_, _removed space: Θ(1)_**<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   finds if **(_in_, _out_) ∈ _E_** i.e. whether edge _out_ to _in_ is in **_G_** or not.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   cuts it off the list if exists , and frees\deletes off the memory, _no-operation_ if not.
+  
+* _int outDegree(PGraph G, int VSize, PVertex V)_ - <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ **_runtime: Θ(|V|+|E'|)_**<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  finds if **Vertex v ∈ _V_** i.e. whether Vertex _V_ is in **_G_** or not.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  and returns _amount of edges_ coming _**out of**_ Vertex _**V**_, returns _-1_ if **_V_** is not found.
